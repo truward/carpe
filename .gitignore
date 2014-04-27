@@ -1,0 +1,11 @@
+# Mac
+.DS_Store
+
+# Idea
+*.iml
+*.ipr
+*.iws
+.idea
+
+# Maven
+target
