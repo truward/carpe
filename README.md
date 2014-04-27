@@ -71,21 +71,27 @@ This file depends on ``module.js`` and after inclusion introduces an entity ``<r
 
 Sample usage:
 
+For template defined in HTML:
+
+```html
+<script id="publication-item-template" type="text/template">
+  <li>
+    <div>
+      <div class="pull-right">
+        <button class="btn btn-danger delete">Delete</button>
+      </div>
+      <h3 class="title"></h3>
+      <p class="content"></p>
+    </div>
+  </li>
+</script>
+```
+
+The corresponding view might look as follows:
+
 ```javascript
 view.PostView = view.View.extend({
-  /* Template should be defined in HTML file, e.g.:
-    <script id="publication-item-template" type="text/template">
-      <li>
-        <div>
-          <div class="pull-right">
-            <button class="btn btn-danger delete">Delete</button>
-          </div>
-          <h3 class="title"></h3>
-          <p class="content"></p>
-        </div>
-      </li>
-    </script>  
-  */
+
   template: "#publication-item-template",
 
   ui: {
