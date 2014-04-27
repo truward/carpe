@@ -22,7 +22,7 @@ window.module = (function () {
       }
 
       // search for namespace
-      if (typeof(window.app) === undefined) {
+      if (typeof(window.app) === "undefined") {
         rootNs = {};
         console.log("Introducing new root namespace");
       } else {
