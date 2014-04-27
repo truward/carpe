@@ -1,7 +1,7 @@
 var a = {test: {myVar: 100}};
 window = {app: a};
 
-var includeFile = require("./dinclude").includeFile;
+var includeFile = require("./include-file").includeFile;
 includeFile("./js/module.js");
 
 describe("module test with predefined root namespace", function () {

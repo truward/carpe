@@ -2,7 +2,7 @@ var a = {};
 
 // include javascript
 window = {app: a};
-var includeFile = require("./dinclude").includeFile;
+var includeFile = require("./include-file").includeFile;
 includeFile("./js/module.js");
 global.module = window.module;
 

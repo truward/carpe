@@ -1,6 +1,6 @@
 window = {};
 
-var includeFile = require("./dinclude").includeFile;
+var includeFile = require("./include-file").includeFile;
 includeFile("./js/module.js");
 
 describe("module test with undefined root namespace", function () {
