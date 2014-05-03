@@ -1,9 +1,21 @@
-Install grunt and plugins:
+
+## Install
+
+Install locally everything needed for the build:
 
 ```
-npm install -g grunt-cli
-
-npm install grunt --save-dev
-npm install grunt-contrib-concat --save-dev
-npm install grunt-contrib-uglify --save-dev
+bash ./local-build/install.sh
 ```
+
+## Run tests
+
+```
+bash ./local-build/jasmine-test.sh
+```
+
+## Build Single Javascript
+
+```
+./node_modules/grunt-cli/bin/grunt
+```
+
