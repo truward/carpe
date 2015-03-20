@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Carpe</title>
+
+</head>
+<body>
+<p id="hello-text"><span class="placeholder"></span></p>
+
+<!-- scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script type="text/javascript">
+  var app = {
+    $: jQuery // imported library: jquery
+  };
+</script>
+
+<script src="../../build/carpe.js"></script>
+
+<script type="text/javascript">
+  module(["view"], function (view) {
+    view.HelloTextView = view.View.extend({
+      el: "#hello-text",
+
+      ui: {
+        p: ".placeholder"
+      },
+
+      onRender: function () {
+        this.ui.p.text("Hello from Carpe!");
+      }
+    });
+  });
+  
+  module(["view", "model", "$"], function (view, model, $) {
+    $(document).ready(function () {
+      var v = new view.HelloTextView();
+      v.create();
+    });
+  });
+</script>
+
+</body>
+</html>
+
